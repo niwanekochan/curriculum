@@ -1,0 +1,32 @@
+問1
+A,Switch3:4097
+（ルートブリッジはブリッジプライオリティの値が小さいものが選ばれるため。）
+
+問2
+Switch1について
+Switch1-Switch3 : 100
+Switch1-Switch2-Switch4-Switch3 : 219 (19+100+100)
+より
+F0/2 = RP
+Switch2のF0/1がRPから
+F0/1 = DP
+
+Switch2について
+Switch2-Switch1-Switch3 : 119
+Switch2-Switch4-Switch3 : 200
+より
+F0/1 = RP
+あまりより
+F/02 = BP
+
+Switch3について
+ルートブリッジなので
+E0/1、E0/2ともに　DP
+
+Switch4について
+Switch4-Switch3 : 100
+Switch4-Switch2-Switch1-Switch3 : 219
+より
+E0/2 = RP
+対抗ポートが何も割り振られていない場合はプライオリティIDが小さい方にDPが割り振られることより
+E0/1 =  DP
